@@ -25,9 +25,9 @@ Additional Notes
 
     pip install -r requirements.txt
 
-    main.py
+    python main.py
 
-    use.py
+    python use.py
 
 Contributing
 
