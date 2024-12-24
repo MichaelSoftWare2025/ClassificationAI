@@ -23,7 +23,7 @@ To use the AI, simply run:
 This will start the AI's functionality and allow you to interact with it.
 Additional Notes
 
-    requirements.txt
+    pip install -r requirements.txt
 
     main.py
 
