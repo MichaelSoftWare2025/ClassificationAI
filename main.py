@@ -12,9 +12,9 @@ data = {
         'I love this movie', 'This movie is terrible', 'I enjoyed the book', 
         'The movie was boring', 'Fantastic performance!', 'Worst film ever', 
         'I will watch it again', 'It was okay', 'Really bad experience', 'Amazing movie',
-        'I love programming!', "I don't love programming", "I don't like programming", "I like programming!", "I like github!"
+        'I love programming!', "I don't love programming", "I don't like programming", "I like programming!"
     ],
-    'label': ['positive', 'negative', 'positive', 'negative', 'positive', 'negative', 'positive', 'neutral', 'negative', 'positive', 'positive', 'negative', 'negative', 'positive', 'positive']
+    'label': ['positive', 'negative', 'positive', 'negative', 'positive', 'negative', 'positive', 'neutral', 'negative', 'positive', 'positive', 'negative', 'negative', 'positive']
 }
 
 df = pd.DataFrame(data)
