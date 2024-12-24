@@ -38,9 +38,4 @@ for text, true_label, pred_label in zip(X_train, y_train, model.predict(X_train)
     print(f"Текст: {text}")
     print(f"Правильная метка: {true_label}, Предсказанная метка: {pred_label}\n")
 
-# Шаг 6: Оценка качества модели на тестовых данных
-accuracy = model.score(X_test, y_test)
-print(f'Accuracy: {accuracy}%')
-
-# Шаг 7: Сохранение модели в файл .classai
 joblib.dump(model, 'text_classification.h5')

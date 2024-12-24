@@ -1,6 +1,7 @@
 Welcome to My AI Project!
 
 =============================
+This project requires python3:
 Installation Instructions
 Step 1: Install Libraries
 
