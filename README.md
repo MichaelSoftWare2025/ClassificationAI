@@ -23,11 +23,11 @@ To use the AI, simply run:
 This will start the AI's functionality and allow you to interact with it.
 Additional Notes
 
-    requirements.txt: Make sure your requirements.txt file includes all necessary dependencies for your AI, such as libraries for data processing, machine learning frameworks, or APIs that your project depends on.
+    requirements.txt
 
-    main.py: This file typically contains the setup or training logic for the AI. Ensure it contains the necessary code to initialize the model or framework you're working with.
+    main.py
 
-    use.py: This script is designed for running your AI after it’s been set up. It may contain code for inference or interacting with the trained model.
+    use.py
 
 Contributing
 
