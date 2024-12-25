@@ -8,4 +8,4 @@ new_text = ["Any text..."]
 
 # Предсказание метки для нового текста
 prediction = model.predict(new_text)
-print(f"Предсказанная метка: {prediction[0]}")
+print(f"Label: {prediction[0]}")

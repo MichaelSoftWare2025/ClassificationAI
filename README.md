@@ -23,11 +23,11 @@ To use the AI, simply run:
 This will start the AI's functionality and allow you to interact with it.
 Additional Notes
 
-    pip install -r requirements.txt
+    pip install -r requirements.txt: This command installs all the necessary dependencies listed in the requirements.txt file.
 
-    python main.py
+    python main.py: This command initializes and sets up the AI system.
 
-    python use.py
+    python use.py: This command starts the AI's functionality and allows you to interact with it.
 
 Contributing
 

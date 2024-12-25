@@ -12,9 +12,9 @@ data = {
         'I love this movie', 'This movie is terrible', 'I enjoyed the book', 
         'The movie was boring', 'Fantastic performance!', 'Worst film ever', 
         'I will watch it again', 'It was okay', 'Really bad experience', 'Amazing movie',
-        'I love programming!', "I don't love programming", "I don't like programming", "I like programming!"
+        'I love programming!', "I don't love programming", "I don't like programming", "I like programming!", "I love count!"
     ],
-    'label': ['positive', 'negative', 'positive', 'negative', 'positive', 'negative', 'positive', 'neutral', 'negative', 'positive', 'positive', 'negative', 'negative', 'positive']
+    'label': ['positive', 'negative', 'positive', 'negative', 'positive', 'negative', 'positive', 'neutral', 'negative', 'positive', 'positive', 'negative', 'negative', 'positive', 'positive']
 }
 
 df = pd.DataFrame(data)
@@ -33,9 +33,9 @@ model = make_pipeline(CountVectorizer(), MultinomialNB())
 model.fit(X_train, y_train)
 
 # Шаг 5: Вывод предсказанных меток и их соответствующих текстов на обучающих данных
-print("Тексты и предсказанные метки:")
+print("Texts and Predicted Labels:")
 for text, true_label, pred_label in zip(X_train, y_train, model.predict(X_train)):
-    print(f"Текст: {text}")
-    print(f"Правильная метка: {true_label}, Предсказанная метка: {pred_label}\n")
+    print(f"Text: {text}")
+    print(f"Label: {true_label}, Предсказанная метка: {pred_label}\n")
 
 joblib.dump(model, 'ClassificationAI.h5')
