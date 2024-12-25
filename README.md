@@ -21,7 +21,6 @@ To use the AI, simply run:
     python use.py
 
 This will start the AI's functionality and allow you to interact with it.
-Additional Notes
 
     pip install -r requirements.txt
 
