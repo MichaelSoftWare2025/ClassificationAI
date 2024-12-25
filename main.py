@@ -38,4 +38,4 @@ for text, true_label, pred_label in zip(X_train, y_train, model.predict(X_train)
     print(f"Текст: {text}")
     print(f"Правильная метка: {true_label}, Предсказанная метка: {pred_label}\n")
 
-joblib.dump(model, 'text_classification.h5')
+joblib.dump(model, 'ClassificationAI.h5')
