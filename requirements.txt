@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 joblib
 pandas
-=======
-joblib
-pandas
->>>>>>> bcaec392123a85a16f632835d611e455d6128f93
 sklearn

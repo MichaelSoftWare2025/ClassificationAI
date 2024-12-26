@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Welcome to My AI Project!
 
 =============================
@@ -32,7 +31,6 @@ Additional Notes
 
 Contributing
 
-=======
 Welcome to My AI Project!
 
 =============================
@@ -66,5 +64,4 @@ Additional Notes
 
 Contributing
 
->>>>>>> bcaec392123a85a16f632835d611e455d6128f93
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with improvements or bug fixes.
