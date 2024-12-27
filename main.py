@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import make_pipeline
+import argparse
 
 # Шаг 1: Подготовка данных
 # Предположим, что у вас есть набор данных с текстами и метками
@@ -31,11 +32,20 @@ model = make_pipeline(TfidfVectorizer(), MultinomialNB())
 
 # Шаг 4: Обучение модели
 model.fit(X_train, y_train)
+argparser = argparse.ArgumentParser()
 
-# Шаг 5: Вывод предсказанных меток и их соответствующих текстов на обучающих данных
-print("Texts and Predicted Labels:")
-for text, true_label, pred_label in zip(X_train, y_train, model.predict(X_train)):
-    print(f"Text: {text}")
-    print(f"Label: {true_label}, Предсказанная метка: {pred_label}\n")
+argparser.add_argument('--text', type=str, help='Text to classify')
+argparser.add_argument('--build', action='store_true', help='Build the model')
+args = argparser.parse_args()
 
-joblib.dump(model, 'ClassificationAI.h5')
+text = args.text
+
+if text:
+    prediction = model.predict([text])
+    print(f"Label: {prediction[0]}")
+else:
+    if args.build:
+        print("Building the model...")
+        joblib.dump(model, 'ClassificationAI.h5')
+    else:
+        print("Please provide a text to classify or use the --build option to train the model.")
