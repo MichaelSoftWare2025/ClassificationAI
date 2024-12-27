@@ -6,4 +6,4 @@ run:
 	$(py) use.py
 
 build:
-	$(py) main.py
+	$(py) main.py --build
