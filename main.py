@@ -6,8 +6,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import make_pipeline
 import argparse
 
-# Шаг 1: Подготовка данных
-# Предположим, что у вас есть набор данных с текстами и метками
 data = {
     'text': [
         'I love this movie', 'This movie is terrible', 'I enjoyed the book', 
@@ -20,17 +18,13 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Шаг 2: Разделение данных на обучающую и тестовую выборки
-X = df['text']  # Тексты
-y = df['label']  # Метки
+X = df['text']
+y = df['label']
 
-# Разделяем данные на тренировочные и тестовые (80%/20%)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Шаг 3: Создание модели с использованием Naive Bayes и CountVectorizer в пайплайне
 model = make_pipeline(TfidfVectorizer(), MultinomialNB())
 
-# Шаг 4: Обучение модели
 model.fit(X_train, y_train)
 argparser = argparse.ArgumentParser()
 
