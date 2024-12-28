@@ -1,7 +1,7 @@
 import joblib
 
 # Загрузка модели
-model = joblib.load('ClassificationAI.h5')
+model = joblib.load('ClassificationAI.pkl')
 
 # Пример нового текста для классификации
 new_text = ["Any text..."]

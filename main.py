@@ -41,6 +41,6 @@ if text:
 else:
     if args.build:
         print("Building the model...")
-        joblib.dump(model, 'ClassificationAI.h5')
+        joblib.dump(model, 'ClassificationAI.pkl')
     else:
         print("Please provide a text to classify or use the --build option to train the model.")
