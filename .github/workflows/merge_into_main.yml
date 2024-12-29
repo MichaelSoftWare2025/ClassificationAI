@@ -1,0 +1,37 @@
+name: Merge Dev into Main
+
+on:
+  push:
+    branches:
+      - dev  # Workflow будет запускаться, когда пуш происходит в ветку dev
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest  # Указываем, на какой операционной системе будет выполняться job
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Проверяем код из репозитория
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+      
+      - name: Fetch the latest branches
+        run: |
+          git fetch origin main  # Получаем последнюю версию ветки main
+          git fetch origin dev  # Получаем последнюю версию ветки dev
+
+      - name: Merge dev into main
+        run: |
+          git checkout main  # Переключаемся на ветку main
+          git merge origin/dev --no-ff -m "Merge dev into main"  # Выполняем слияние веток
+          
+      - name: Push changes to main
+        run: |
+          git push origin main  # Пушим изменения в ветку main
+          
+      - name: Notify on successful merge
+        run: |
+          echo "Dev branch successfully merged into main!"
