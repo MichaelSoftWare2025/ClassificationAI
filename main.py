@@ -27,6 +27,8 @@ model = make_pipeline(CountVectorizer(), MultinomialNB())
 
 model.fit(X_train, y_train)
 
+model.score(X_test, y_test)
+
 argparser = argparse.ArgumentParser()
 
 argparser.add_argument('--text', type=str, help='Text to classify')
