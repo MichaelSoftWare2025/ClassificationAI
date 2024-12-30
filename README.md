@@ -25,7 +25,9 @@ Additional Notes
 
     pip install -r requirements.txt: This command installs all the necessary dependencies listed in the requirements.txt file.
 
-    python main.py: This command initializes and sets up the AI system.
+    python main.py --build: This command initializes and save the AI system.
+
+    python main.py --text "any text": This command neded to classify text (Replace 'any text' on you text)
 
     python use.py: This command starts the AI's functionality and allows you to interact with it.
 
